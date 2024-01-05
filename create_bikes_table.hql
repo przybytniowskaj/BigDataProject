@@ -1,6 +1,6 @@
 DROP TABle default.bikes;
 
-CREATE EXTERNAL TABLE IF NOT EXISTS default.bikes (trip_duration DOUBLE, start_time STRING, stop_time STRING, start_station_id INT, start_station_name STRING, start_station_latitude DOUBLE, start_station_longitude DOUBLE, end_station_id INT, end_station_name STRING, end_station_latitude DOUBLE, end_station_longitude DOUBLE, bike_id INT, user_type STRING, birth_year DOUBLE, gender INT, start_round_hour STRING, stop_round_hour STRING)
+CREATE EXTERNAL TABLE IF NOT EXISTS default.bikes (ride_id STRING, rideable_type STRING, start_time STRING, stop_time STRING, start_station_name STRING, start_station_id DOUBLE, end_station_name STRING, end_station_id DOUBLE, start_lat DOUBLE, start_lng DOUBLE, end_lat DOUBLE, end_lng DOUBLE, member_casual STRING, start_round_hour STRING, stop_round_hour STRING)
 Partitioned By(partition_year STRING, partition_month STRING) 
 row format delimited
 fields terminated by ','
