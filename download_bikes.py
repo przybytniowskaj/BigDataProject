@@ -31,7 +31,10 @@ def transform_datetime(original_datetime):
     year = original_datetime.year
     month = original_datetime.month
     day = original_datetime.day
-    transformed_datetime = datetime(year=year, month=month, day=day, hour=23, minute=48, second=20)
+    hour = original_datetime.hour
+    minute = original_datetime.minute
+    second = original_datetime.second
+    transformed_datetime = datetime(year=year, month=month, day=day, hour=hour, minute=minute, second=second)
     return transformed_datetime.strftime('%Y-%m-%d %H:%M:%S')
 
 def rename_and_map_columns(bike_df):
